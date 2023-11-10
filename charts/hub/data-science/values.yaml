@@ -1,6 +1,6 @@
 global:
   datascience:
-    namespace: ds-storage
+    namespace: ml-data-science
     s3:
       bucketBaseName: ""
   datacenter:
