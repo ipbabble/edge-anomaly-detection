@@ -5,7 +5,7 @@ clusterGroup:
   namespaces:
     - open-cluster-management
     - vault
-    - golang-external-secrets
+    - external-secrets
     - config-demo
     - hello-world
     - policies
