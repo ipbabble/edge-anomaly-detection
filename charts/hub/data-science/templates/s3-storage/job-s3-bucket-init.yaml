@@ -2,7 +2,7 @@ kind: Job
 apiVersion: batch/v1
 metadata:
   name: bucket-init
-  namespace: '{{ .Values.global.data-science.namespace }}'
+  namespace: '{{ .Values.global.datascience.namespace }}'
   annotations:
     argocd.argoproj.io/hook: Sync
     argocd.argoproj.io/sync-wave: "15"
@@ -39,6 +39,6 @@ spec:
       dnsPolicy: ClusterFirst
       activeDeadlineSeconds: 900
       restartPolicy: Never
-      serviceAccount: {{ .Values.global.data-science.namespace }}-sa
-      serviceAccountName: {{ .Values.global.data-science.namespace }}-sa
+      serviceAccount: {{ .Values.global.datascience.namespace }}-sa
+      serviceAccountName: {{ .Values.global.datascience.namespace }}-sa
       terminationGracePeriodSeconds: 60

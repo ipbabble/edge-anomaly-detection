@@ -2,7 +2,7 @@ kind: ConfigMap
 apiVersion: v1
 metadata:
   name: bucket-init
-  namespace: '{{ .Values.global.data-science.namespace }}'
+  namespace: '{{ .Values.global.datascience.namespace }}'
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
 data:
@@ -13,8 +13,8 @@ data:
     import botocore
     import argparse
 
-    namespace = '{{ .Values.global.data-science.namespace }}'
-    bucket_base_name = '{{ .Values.global.data-science.s3.bucketBaseName }}'
+    namespace = '{{ .Values.global.datascience.namespace }}'
+    bucket_base_name = '{{ .Values.global.datascience.s3.bucketBaseName }}'
     aws_access_key_id = os.environ['AWS_ACCESS_KEY_ID']
     aws_secret_access_key = os.environ['AWS_SECRET_ACCESS_KEY']
     endpoint_url = 'http://rook-ceph-rgw-ocs-storagecluster-cephobjectstore.openshift-storage.svc.cluster.local'

@@ -1,5 +1,5 @@
 global:
-  data-science:
+  datascience:
     namespace: ds-storage
     s3:
       bucketBaseName: ""
