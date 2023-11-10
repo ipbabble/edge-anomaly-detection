@@ -1,0 +1,8 @@
+global:
+  data-science:
+    namespace: ds-storage
+    s3:
+      bucketBaseName: ""
+  datacenter:
+    storageClassName: gp2
+    region: ""

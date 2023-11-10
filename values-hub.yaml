@@ -40,7 +40,7 @@ clusterGroup:
     ods:
       name: rhods-operator
       channel: stable
-      namespace: redhat-ods-operator
+      namespace: openshift-operators
 
     amqbroker-prod:
       name: amq-broker-rhel8
