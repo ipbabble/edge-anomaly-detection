@@ -69,6 +69,7 @@ clusterGroup:
     - hello-world
     - data-science-proj
     - devops
+    - external-secrets
 
   applications:
     acm:
@@ -91,8 +92,14 @@ clusterGroup:
     golang-external-secrets:
       name: golang-external-secrets
       namespace: golang-external-secrets
-      project: hub
+      project: external-secrets
       path: common/golang-external-secrets
+
+    secrets:
+      name: external-secrets
+      namespace: external-secrets
+      project: external-secrets
+      path: charts/hub/external-secrets
 
     storage:
       name: storage
