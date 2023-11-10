@@ -4,13 +4,13 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
     kubectl.kubernetes.io/last-applied-configuration: >
-      {"apiVersion":"kafka.strimzi.io/v1beta2","kind":"Kafka","metadata":{"annotations":{"argocd.argoproj.io/sync-options":"SkipDryRunOnMissingResource=true"},"labels":{"argocd.argoproj.io/instance":"data-science"},"name":"kafka-cluster","namespace":"ml-data-science"},"spec":{"entityOperator":{"topicOperator":{},"userOperator":{}},"kafka":{"config":{"offsets.topic.replication.factor":3,"transaction.state.log.min.isr":2,"transaction.state.log.replication.factor":3},"listeners":[{"name":"plain","port":9092,"tls":false,"type":"internal"},{"name":"tls","port":9093,"tls":true,"type":"internal"},{"name":"external","port":9094,"tls":true,"type":"route"}],"replicas":3,"storage":{"type":"ephemeral"}},"zookeeper":{"replicas":3,"storage":{"type":"ephemeral"}}}}
+      {"apiVersion":"kafka.strimzi.io/v1beta2","kind":"Kafka","metadata":{"annotations":{"argocd.argoproj.io/sync-options":"SkipDryRunOnMissingResource=true"},"labels":{"argocd.argoproj.io/instance":"data-science"},"name":"kafka-cluster","namespace":"ml-development"},"spec":{"entityOperator":{"topicOperator":{},"userOperator":{}},"kafka":{"config":{"offsets.topic.replication.factor":3,"transaction.state.log.min.isr":2,"transaction.state.log.replication.factor":3},"listeners":[{"name":"plain","port":9092,"tls":false,"type":"internal"},{"name":"tls","port":9093,"tls":true,"type":"internal"},{"name":"external","port":9094,"tls":true,"type":"route"}],"replicas":3,"storage":{"type":"ephemeral"}},"zookeeper":{"replicas":3,"storage":{"type":"ephemeral"}}}}
   creationTimestamp: '2023-09-08T21:59:14Z'
   generation: 1
   labels:
     argocd.argoproj.io/instance: data-science
   name: kafka-cluster
-  namespace: ml-data-science
+  namespace: ml-development
   resourceVersion: '42102'
   uid: 88fc052f-95e8-4f91-8e76-3d38461d8415
 spec:
@@ -63,7 +63,7 @@ status:
     - lastTransitionTime: '2023-09-08T22:04:41.276111398Z'
       message: >-
         Failure executing: GET at:
-        https://172.31.0.1:443/apis/route.openshift.io/v1/namespaces/ml-data-science/routes?labelSelector=strimzi.io%2Fcluster%3Dkafka-cluster%2Cstrimzi.io%2Fname%3Dkafka-cluster-kafka%2Cstrimzi.io%2Fkind%3DKafka&resourceVersion=0.
+        https://172.31.0.1:443/apis/route.openshift.io/v1/namespaces/ml-development/routes?labelSelector=strimzi.io%2Fcluster%3Dkafka-cluster%2Cstrimzi.io%2Fname%3Dkafka-cluster-kafka%2Cstrimzi.io%2Fkind%3DKafka&resourceVersion=0.
         Message: Service Unavailable.
       reason: KubernetesClientException
       status: 'True'

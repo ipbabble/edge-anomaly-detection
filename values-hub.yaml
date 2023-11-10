@@ -11,13 +11,14 @@ clusterGroup:
     - policies
     - openshift-storage
     - redhat-ods-operator
+    - ml-development
     - edge-workspace
     - edge-test-all
     - edge-ci
-    - ml-data-science:
+    - ml-development:
         labels:
           app.kubernetes.io/instance: edge-anomaly-detection-hub
-          kubernetes.io/metadata.name: ml-data-science
+          kubernetes.io/metadata.name: ml-development
           argocd.argoproj.io/managed-by: edge-anomaly-detection-hub
           modelmesh-enabled: 'true'
           opendatahub.io/dashboard: 'true'
@@ -50,13 +51,13 @@ clusterGroup:
     amqstreams-prod-dev:
       name: amq-streams
       namespaces: 
-      - ml-data-science
+      - ml-development
       - edge-test-all
 
     camelk-prod-dev:
       name: red-hat-camel-k
       namespaces: 
-      - ml-data-science
+      - ml-development
       - edge-test-all
 
     openshift-pipelines:

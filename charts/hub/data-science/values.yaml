@@ -1,6 +1,6 @@
 global:
   datascience:
-    namespace: ml-data-science
+    namespace: ml-development
     s3:
       bucketBaseName: ""
   datacenter:
