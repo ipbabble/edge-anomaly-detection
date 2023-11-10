@@ -6,3 +6,8 @@ global:
   datacenter:
     storageClassName: gp2
     region: ""
+
+kafkaSource:
+  bootstrapserver: "ds-cluster-kafka-bootstrap.sensors.svc:9092"
+  name: "sensor-data"
+  consumerGroup: "risk-assessment"
