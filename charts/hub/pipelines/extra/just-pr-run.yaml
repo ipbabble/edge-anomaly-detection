@@ -2,7 +2,7 @@ apiVersion: tekton.dev/v1beta1
 kind: PipelineRun
 metadata:
   generateName: just-pr-run-
-  namespace: manuela-ci
+  namespace: edge-ci
   labels:
     argocd.argoproj.io/instance: pipelines-industrial-edge-datacenter
     tekton.dev/pipeline: just-pr

@@ -56,7 +56,7 @@ The pipelines expect a set of parameters and workspaces to be in place. To make 
 They can be instantiated as follows:
 
 ```bash
-oc process -n manuela-ci build-iot-consumer | oc process -n manuela-ci -f -
+oc process -n edge-ci build-iot-consumer | oc process -n edge-ci -f -
 ```
 
 In addition, there is a [stage-production-pipelinerun](templates/stage-production-pipelinerun.yaml) template which is used by the [build-and-test](pipelines/build-and-test.yaml) pipeline to trigger the [stage-production](pipelines/stage-production.yaml) pipeline.
