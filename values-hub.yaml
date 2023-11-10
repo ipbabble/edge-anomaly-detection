@@ -5,7 +5,7 @@ clusterGroup:
   namespaces:
     - open-cluster-management
     - vault
-    - external-secrets
+    - golang-external-secrets
     - config-demo
     - hello-world
     - policies
@@ -92,7 +92,7 @@ clusterGroup:
 
     golang-external-secrets:
       name: golang-external-secrets
-      namespace: golang-external-secrets
+      namespace: external-secrets
       project: external-secrets
       path: common/golang-external-secrets
 
