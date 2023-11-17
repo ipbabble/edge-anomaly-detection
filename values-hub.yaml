@@ -10,9 +10,9 @@ clusterGroup:
     - hello-world
     - policies
     - openshift-storage
-    - redhat-ods-operator:
-        operatorGroup: true
-        targetNamespaces:
+    - redhat-ods-operator
+#        operatorGroup: true
+#        targetNamespaces:
     - ml-development
     - edge-workspace
     - edge-test-all
@@ -42,9 +42,9 @@ clusterGroup:
 
     ods:
       name: rhods-operator
-      channel: stable
+      channel: alpha
       namespace: redhat-ods-operator
-
+      
     amqbroker-prod:
       name: amq-broker-rhel8
       channel: 7.10.x
